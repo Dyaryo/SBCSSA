@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Rooster head">
+  <rect width="64" height="64" rx="12" fill="#0b1622"/>
+  <!-- comb -->
+  <circle cx="21" cy="20" r="6" fill="#d8402c"/>
+  <circle cx="30" cy="15" r="7" fill="#e04a32"/>
+  <circle cx="39" cy="20" r="6" fill="#d8402c"/>
+  <!-- head -->
+  <circle cx="30" cy="36" r="17" fill="#f5e3c3"/>
+  <!-- neck warm shade -->
+  <path d="M13 36a17 17 0 0 0 17 17v-6a11 11 0 0 1-11-11z" fill="#e8d0a8"/>
+  <!-- beak -->
+  <path d="M45 33l14 5-14 6z" fill="#e9a53a"/>
+  <path d="M45 39l8 3-8 3z" fill="#c9862a"/>
+  <!-- wattle -->
+  <ellipse cx="46" cy="48" rx="5" ry="7" fill="#d8402c"/>
+  <!-- eye -->
+  <circle cx="37" cy="30" r="3.6" fill="#141d29"/>
+  <circle cx="38.4" cy="28.6" r="1.2" fill="#fff"/>
+</svg>

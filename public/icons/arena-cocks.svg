@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 170" role="img" aria-label="Meron red and wala blue roosters squaring off">
+  <defs>
+    <!-- feather fan: four tapered plumes sweeping up and back from the neck -->
+    <g id="fan">
+      <path d="M0 0 C-16 -18 -26 -44 -24 -70 C-6 -56 2 -34 4 -10 Z" opacity=".38"/>
+      <path d="M4 -4 C-6 -30 -8 -58 0 -82 C18 -62 20 -34 12 -8 Z" opacity=".55"/>
+      <path d="M10 -6 C12 -34 24 -58 42 -74 C46 -48 34 -22 18 -6 Z" opacity=".40"/>
+      <path d="M0 -2 C-4 -26 -2 -50 4 -66" stroke="#0b1622" stroke-opacity=".22" stroke-width="2" fill="none"/>
+    </g>
+
+    <!-- one rooster head, facing right -->
+    <g id="head">
+      <!-- head -->
+      <circle cx="0" cy="0" r="34"/>
+      <!-- neck -->
+      <path d="M-30 18 C-14 30 10 32 26 22 L30 44 C10 54 -20 50 -38 38 Z"/>
+      <!-- comb -->
+      <circle cx="-22" cy="-34" r="11" fill="#d8402c"/>
+      <circle cx="-4" cy="-42" r="13" fill="#e04a32"/>
+      <circle cx="15" cy="-34" r="11" fill="#d8402c"/>
+      <!-- wattle -->
+      <ellipse cx="26" cy="26" rx="9" ry="13" fill="#d8402c"/>
+      <!-- beak, open -->
+      <path d="M30 -12 L46 -6 L30 4 Z" fill="#e9a53a"/>
+      <path d="M30 8 L43 13 L30 21 Z" fill="#c9862a"/>
+      <!-- eye -->
+      <circle cx="12" cy="-8" r="7" fill="#0b1622"/>
+      <circle cx="14.5" cy="-10.5" r="2.4" fill="#fff"/>
+      <path d="M2 -18 C8 -22 18 -22 24 -18" stroke="#0b1622" stroke-opacity=".35" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </g>
+  </defs>
+
+  <!-- floor glow -->
+  <ellipse cx="130" cy="104" rx="98" ry="60" fill="#e9a53a" opacity=".08"/>
+
+  <!-- meron, red, facing right -->
+  <g transform="translate(74,86)" fill="#c9493f">
+    <use href="#fan" fill="#c9493f" transform="translate(-6,4) rotate(-38)"/>
+    <use href="#head" fill="#c9493f"/>
+  </g>
+
+  <!-- wala, blue, facing left -->
+  <g transform="translate(186,86) scale(-1,1)" fill="#3f7fbf">
+    <use href="#fan" fill="#3f7fbf" transform="translate(-6,4) rotate(-38)"/>
+    <use href="#head" fill="#3f7fbf"/>
+  </g>
+
+  <!-- the spark where the two birds meet -->
+  <g stroke="#e9a53a" fill="none" stroke-linecap="round" stroke-width="3.5">
+    <path d="M128 62 L132 72"/>
+    <path d="M120 74 L128 78"/>
+    <path d="M140 74 L132 78"/>
+    <path d="M124 92 L130 84"/>
+    <path d="M136 92 L130 84"/>
+  </g>
+  <circle cx="130" cy="79" r="4.5" fill="#e9a53a"/>
+</svg>

@@ -1,0 +1,19 @@
+{
+  "name": "E-Sabong Overall Report",
+  "short_name": "Sabong Report",
+  "description": "Overall summary, draw and cancelled totals every ten graded fights.",
+  "start_url": "/supervisor/mobile",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#06101a",
+  "theme_color": "#071018",
+  "icons": [
+    {
+      "src": "/icons/app.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

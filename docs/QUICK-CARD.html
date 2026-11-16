@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>E-Sabong quick card — tellers &amp; Game Masters</title>
+<style>
+  @page { size: A4 portrait; margin: 8mm; }
+
+  :root {
+    --ink: #111820;
+    --muted: #5a6672;
+    --line: #c9d2db;
+    --gold: #8a6418;
+    --red: #a3243b;
+    --blue: #1c5a86;
+    --green: #1f6b45;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: #e8ebee;
+    color: var(--ink);
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-size: 9.1pt;
+    line-height: 1.28;
+  }
+
+  .card {
+    width: 194mm;
+    min-height: 281mm;
+    margin: 10mm auto;
+    padding: 6mm 6.5mm 5mm;
+    background: #fff;
+    border: 1px solid var(--line);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, .14);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .screen-only { text-align: center; padding-top: 10px; }
+  .screen-only button {
+    font: inherit; font-weight: 700; padding: 8px 18px; border: 0; border-radius: 6px;
+    background: #14202c; color: #fff; cursor: pointer;
+  }
+
+  header {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    border-bottom: 2.2pt solid var(--ink); padding-bottom: 2.4mm; margin-bottom: 2.6mm;
+  }
+  .brand { font-size: 16.5pt; font-weight: 900; letter-spacing: .06em; line-height: 1; }
+  .brand span { color: var(--gold); }
+  .sub { font-size: 8pt; color: var(--muted); margin-top: 1.2mm; letter-spacing: .04em; text-transform: uppercase; }
+  .role-note {
+    max-width: 66mm; text-align: right; font-size: 7.6pt; color: var(--muted); line-height: 1.3;
+  }
+  .role-note strong { color: var(--red); }
+
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; flex: 1; }
+  .col { min-width: 0; }
+
+  h2 {
+    font-size: 9.4pt; font-weight: 800; letter-spacing: .09em; text-transform: uppercase;
+    margin: 0 0 1.4mm; padding: 1.1mm 2mm; color: #fff; background: var(--ink);
+  }
+  .col.teller h2 { background: var(--blue); }
+  .col.gm h2 { background: var(--green); }
+
+  h3 {
+    font-size: 8.7pt; margin: 2.6mm 0 1mm; letter-spacing: .02em;
+    border-bottom: .6pt solid var(--line); padding-bottom: .6mm;
+  }
+  h3:first-of-type { margin-top: 0; }
+
+  ol, ul { margin: 0 0 0 4.2mm; padding: 0; }
+  ol { padding-left: 1mm; }
+  li { margin: 0 0 .85mm; }
+  p { margin: 0 0 1mm; }
+
+  kbd {
+    display: inline-block; min-width: 4.6mm; padding: 0 1.1mm; margin: 0 .3mm;
+    border: .7pt solid #7d8a96; border-bottom-width: 1.6pt; border-radius: 2px;
+    background: #f2f4f6; font: 700 7.6pt/1.45 "Segoe UI", Arial, sans-serif; text-align: center;
+  }
+
+  .callout {
+    margin: 1.6mm 0; padding: 1.5mm 2mm; border-left: 2.4pt solid var(--red);
+    background: #fbf1f2; font-size: 8.2pt;
+  }
+  .callout.ok { border-left-color: var(--green); background: #f0f7f2; }
+  .callout strong { text-transform: uppercase; letter-spacing: .04em; }
+
+  .side-key { font-weight: 800; }
+  .meron { color: var(--red); }
+  .wala { color: var(--blue); }
+  .draw { color: var(--gold); }
+
+  .never { margin-top: auto; }
+  .never h3 { border-bottom-color: var(--red); color: var(--red); }
+  .never ul { font-size: 8.4pt; }
+
+  footer {
+    margin-top: 3mm; border-top: 1.4pt solid var(--ink); padding-top: 1.8mm;
+    display: flex; justify-content: space-between; gap: 4mm; font-size: 7.6pt; color: var(--muted);
+  }
+  footer strong { color: var(--ink); }
+
+  @media print {
+    body { background: #fff; font-size: 8.9pt; }
+    .screen-only { display: none; }
+    .card {
+      width: auto; min-height: 0; margin: 0; padding: 0;
+      border: 0; box-shadow: none;
+    }
+  }
+
+  @media screen and (max-width: 760px) {
+    .card { width: auto; margin: 12px; min-height: 0; }
+    .cols { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="screen-only">
+  <button type="button" onclick="window.print()">Print this card</button>
+</div>
+
+<main class="card">
+  <header>
+    <div>
+      <div class="brand">E-SABONG <span>CONSOLE</span></div>
+      <div class="sub">Quick card · POS teller &amp; Game Master · keep at the counter</div>
+    </div>
+    <div class="role-note">
+      Every balance is a <strong>virtual credit with no cash value</strong>.
+      No cash-in, cash-out, e-wallet or real-money payout is allowed.
+    </div>
+  </header>
+
+  <div class="cols">
+    <!-- ============ TELLER ============ -->
+    <section class="col teller">
+      <h2>POS teller</h2>
+
+      <h3>Start of shift</h3>
+      <ol>
+        <li>Sign in with <strong>your own</strong> username and password.</li>
+        <li>If this terminal is assigned to you, the shift opens automatically and the banner says
+          <em>“Clocked in on POS-…”</em>. Otherwise press <strong>Open shift</strong> and add a note.</li>
+        <li>Check <strong>Credits available</strong> and the <strong>Workstation</strong> code before taking money.</li>
+        <li>No open shift = bet buttons disabled. That is normal, not an error.</li>
+      </ol>
+
+      <h3>Taking a bet</h3>
+      <ol>
+        <li>Confirm the <strong>fight number</strong> on screen is the fight in progress.</li>
+        <li>Type the amount — <kbd>TAB</kbd> jumps to the amount box.</li>
+        <li>Choose the side: <kbd>F2</kbd> <span class="side-key meron">MERON</span>,
+          <kbd>F3</kbd> <span class="side-key wala">WALA</span>,
+          <kbd>F4</kbd> <span class="side-key draw">DRAW</span>.</li>
+        <li>Wait for <strong>“Bet accepted”</strong> and ticket number. The receipt prints automatically.</li>
+        <li>If it says <em>duplicate submission</em>: wait 5 seconds and retry <strong>once</strong>. Never retry a bet that already printed.</li>
+      </ol>
+
+      <h3>Paying a winning slip</h3>
+      <ol>
+        <li>Scan the ticket, or press <kbd>F9</kbd> and type the <strong>MANUAL CODE</strong> under the barcode.</li>
+        <li>Check the screen says <strong>Pay out N credits</strong> and the amount matches the ticket.</li>
+        <li>Hand over the credits, then press <strong>Record payout</strong> so it leaves the queue.</li>
+        <li><strong>“Already paid out”</strong> — never pay it again. <strong>“Not settled yet”</strong> — never pay it.</li>
+        <li>Another terminal’s slip: send the player to that counter. Altered code: do not pay, call the Game Master.</li>
+      </ol>
+
+      <h3>End of shift</h3>
+      <ol>
+        <li>All bets must be settled. If any are active, ask the Game Master to settle or void them.</li>
+        <li>Press <strong>Close shift</strong> with a note. The shift report is sealed automatically.</li>
+        <li>Print the <strong>closeout slip</strong>, sign it, hand it to the Game Master.</li>
+        <li>Signing out on your assigned terminal closes the shift too — but only when nothing is active.</li>
+      </ol>
+
+      <div class="never">
+        <h3>Never</h3>
+        <ul>
+          <li>Share a login or let anyone bet on your account.</li>
+          <li>Accept a bet without a receipt, “on the side”.</li>
+          <li>Pay an unsettled, altered or other-terminal slip.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ GAME MASTER ============ -->
+    <section class="col gm">
+      <h2>Game Master</h2>
+
+      <h3>Run a fight</h3>
+      <ol>
+        <li><strong>Fights → Console</strong>: check the fight number, both corners and the odds.</li>
+        <li><strong>Open betting</strong> (only from scheduled). Teller screens show the fight within a few seconds —
+          the cards slide in without reloading.</li>
+        <li>Watch the live stakes. Use <strong>Meron Locked</strong> / <strong>Wala Locked</strong> if one side runs too heavy.</li>
+        <li><strong>Lock betting</strong> before the fight starts — no new bets after this.</li>
+        <li><strong>Mark live</strong> when the fight starts.</li>
+        <li><strong>Declare result</strong>: Meron pays red, Wala pays blue.
+          <span class="side-key draw">Draw</span> and <strong>Cancelled</strong> refund every stake.
+          The button shows the amount it will move before you press it.</li>
+        <li><strong>Next fight</strong> after grading. Corners carry over; odds are pre-filled.</li>
+      </ol>
+
+      <h3>Rules that protect the floor</h3>
+      <ul>
+        <li>One fight at a time. A new fight cannot be created until the previous one has a declared winner.</li>
+        <li>Fight numbers must climb. Do not grade #3 before #2.</li>
+        <li>A result is <strong>terminal</strong> — never settle the same fight twice. Schedule a new fight instead.</li>
+        <li><strong>Stop ratio</strong> caps the payout at stake × ratio, even when the posted odds are higher.</li>
+        <li><strong>Regrade</strong> is for a wrong call, and is blocked once any winning slip has been paid out.</li>
+        <li><strong>Cancelled</strong> needs a written reason and refunds all stakes.</li>
+      </ul>
+
+      <h3>Tellers &amp; terminals</h3>
+      <ul>
+        <li>Create teller accounts and allocate virtual credits; a suspended teller cannot sign in.</li>
+        <li><strong>POS monitor</strong>: bind a browser to a workstation, then ask the Supervisor to approve it.</li>
+        <li><strong>Force-close shift</strong> needs a reason and seals a snapshot — unsettled slips stay visible.</li>
+        <li>Void an individual bet only with a reason.</li>
+        <li>Terminal assignment is done by the <strong>Supervisor</strong> in <strong>Accounts</strong>; one terminal belongs to one teller.</li>
+      </ul>
+
+      <div class="callout">
+        <strong>Before grading:</strong> confirm you are on the right fight number. A graded slip starts
+        paying out immediately at the counters.
+      </div>
+
+      <div class="callout ok">
+        <strong>Fight card looks stale?</strong> It refreshes itself every 4 seconds. If it does not,
+        check the LAN cable/server before touching anything.
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <span><strong>Stuck mid-event:</strong> stop and call the Supervisor. Do not reboot the server, clear the browser,
+      or sign in as another user.</span>
+    <span><strong>Supervisor only:</strong> credits, terminal approval, password resets, force-close,
+      reconciliation and sealed reports.</span>
+  </footer>
+</main>
+
+</body>
+</html>

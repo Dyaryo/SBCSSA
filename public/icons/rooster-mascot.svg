@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Camsur Sports Arena rooster">
+  <defs>
+    <linearGradient id="plume" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#d1541c"/>
+      <stop offset=".5" stop-color="#ef8f2c"/>
+      <stop offset="1" stop-color="#fde2a4"/>
+    </linearGradient>
+    <linearGradient id="head" x1=".15" y1=".9" x2=".8" y2=".15">
+      <stop offset="0" stop-color="#cf4f19"/>
+      <stop offset=".55" stop-color="#eb8a2b"/>
+      <stop offset="1" stop-color="#f9c96a"/>
+    </linearGradient>
+    <linearGradient id="beak" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f2a63c"/>
+      <stop offset="1" stop-color="#cf5f18"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="200" height="200" rx="30" fill="#101a26"/>
+
+  <g stroke="#fbeecd" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+    <!-- crest: four heavy plumes rooted in the crown, sweeping back -->
+    <path d="M70 74 C58 44 64 20 84 6 C96 32 94 56 88 74 Z" fill="url(#plume)"/>
+    <path d="M88 66 C86 34 100 14 126 8 C128 38 116 58 100 70 Z" fill="url(#plume)"/>
+    <path d="M104 68 C114 40 136 24 162 24 C150 52 132 68 112 76 Z" fill="url(#plume)"/>
+    <path d="M112 82 C134 64 158 60 182 66 C162 84 138 92 116 92 Z" fill="url(#plume)"/>
+
+    <!-- neck feathers at the back -->
+    <path d="M126 132 C150 142 166 162 170 186 C146 176 126 160 112 142 Z" fill="url(#plume)"/>
+
+    <!-- head -->
+    <path d="M96 54 C128 52 150 76 150 106 C150 134 130 154 100 154 C68 154 48 132 48 104 C48 76 66 56 96 54 Z" fill="url(#head)"/>
+    <path d="M60 76 C52 96 54 120 68 134 C78 144 92 148 104 146 C84 138 70 118 70 98 C70 86 74 78 82 70 Z" fill="#fad889" opacity=".45" stroke="none"/>
+
+    <!-- brow and jaw accents -->
+    <path d="M72 78 C84 70 100 70 110 76" fill="none" stroke="#b9451a" stroke-width="4.5" stroke-opacity=".65"/>
+    <path d="M66 128 C80 138 96 138 108 130" fill="none" stroke="#b9451a" stroke-width="4.5" stroke-opacity=".45"/>
+
+    <!-- hooked beak pointing left, open at the mouth line -->
+    <path d="M58 86 C46 86 32 92 20 102 C36 110 52 106 60 100 Z" fill="url(#beak)"/>
+    <path d="M58 104 C46 106 34 110 24 116 C38 120 52 116 60 110 Z" fill="#c2551a"/>
+
+    <!-- wattle hanging under the beak -->
+    <path d="M72 116 C82 116 88 124 86 136 C84 148 74 156 66 152 C58 148 58 134 62 126 Z" fill="#d64a1c" stroke-width="4"/>
+
+    <!-- eye -->
+    <circle cx="102" cy="94" r="15" fill="#fbe3ae"/>
+    <circle cx="102" cy="94" r="9" fill="#1a1119"/>
+    <circle cx="105" cy="90" r="3.2" fill="#fff"/>
+  </g>
+</svg>
