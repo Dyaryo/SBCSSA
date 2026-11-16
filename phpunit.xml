@@ -28,7 +28,10 @@
         <env name="DB_URL" value=""/>
         <env name="MAIL_MAILER" value="array"/>
         <env name="QUEUE_CONNECTION" value="sync"/>
+<<<<<<< HEAD
         <env name="POS_STRICT_DEVICE_BINDING" value="false"/>
+=======
+>>>>>>> 5b8095f42f2d9189f47ba807c47ebf2a7b443522
         <env name="SESSION_DRIVER" value="array"/>
         <env name="PULSE_ENABLED" value="false"/>
         <env name="TELESCOPE_ENABLED" value="false"/>

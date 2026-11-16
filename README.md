@@ -14,7 +14,11 @@ A multi-terminal, role-based console for running sabong (cockfight) events —
 
 | Role | What they do |
 |---|---|
+<<<<<<< HEAD
 | **Supervisor** | Overview and live floor (cards running, open windows, winners road), reports and sealed snapshots, a block-by-block mobile report, accounts and virtual credits, workstation registry, POS shifts and force-close, audit log, reconciliation |
+=======
+| **Supervisor** | Overview and live floor (cards running, open windows, winners road), reports and sealed snapshots, accounts and virtual credits, workstation registry, POS shifts and force-close, audit log, reconciliation |
+>>>>>>> 5b8095f42f2d9189f47ba807c47ebf2a7b443522
 | **Game Master** | Create cards with their event-form settings (planned fights, stopper, draw ratio, TV share, bomba, payout display), schedule fights, switch sides open/locked, open/close/start/grade, regrade a wrong call, next-fight creation, bet history, live-feed dashboard |
 | **POS Teller** | Pay in and pay out only: shifts, quick-amount bet pad (up to 100,000) with TAB/F2/F3/F4 keys, automatic receipt printing, payout queue, slip lookup with F9 scan, history |
 
@@ -85,6 +89,7 @@ DB_PASSWORD=
 Then run `php artisan migrate --seed`. On a fresh machine, `php artisan migrate`
 (not `migrate:fresh`) keeps existing data.
 
+<<<<<<< HEAD
 ### Accounts
 
 The six accounts are `supervisor`, `gm.north`, `gm.south`, `pos01`, `pos02`
@@ -99,6 +104,23 @@ A fresh `php artisan migrate --seed` still creates the development seed
 accounts from `DatabaseSeeder`; replace those passwords immediately after a
 fresh install.
 
+=======
+### Seed accounts
+
+| Role | Username | Password |
+|---|---|---|
+| Supervisor | `supervisor` | `Admin@2026` |
+| Game Master | `gm.north` | `Master@2026` |
+| Game Master | `gm.south` | `Master@2026` |
+| POS Teller | `pos01` | `Teller@2026` |
+| POS Teller | `pos02` | `Teller@2026` |
+| POS Teller | `pos03` | `Teller@2026` |
+
+Change every password before handing the console to anyone: sign in as
+Supervisor → **Accounts** → **Reset** on each row. Fund teller tills from the
+same screen with **Grant** before the first bet.
+
+>>>>>>> 5b8095f42f2d9189f47ba807c47ebf2a7b443522
 The install starts with **no events, fights, bets or shifts** — that is
 intentional. Create the first card as the Game Master.
 
@@ -152,6 +174,7 @@ TLS on port 8443. Re-run the certificate script whenever the server IP changes.
 Keyboard on the POS: **TAB** amount, **F2** Meron, **F3** Wala, **F4** Draw,
 **F9** jump to the payout scan box.
 
+<<<<<<< HEAD
 ### Terminal attendance (automatic shifts)
 
 1. Supervisor → **Accounts** → create the teller and pick a **Terminal
@@ -189,6 +212,8 @@ APK/IPA to sideload, no store account and no review. The manifest and service
 worker (`public/manifest.webmanifest`, `public/sw.js`) provide the icon and an
 offline app shell.
 
+=======
+>>>>>>> 5b8095f42f2d9189f47ba807c47ebf2a7b443522
 Printing: receipts open the browser print dialog automatically after a bet. For
 unattended counters, launch the kiosk browser with `--kiosk-printing` so it
 prints without asking.
@@ -224,9 +249,13 @@ php artisan system:reset --force --till=5000   REM same, leaving 5,000 cr in eve
 `system:reset` is destructive: it clears the operational floor (cards, fights,
 bets, shifts, ledger movements, audit and login history), zeroes every wallet
 unless you pass `--till=`, and keeps user accounts and workstations. Use it to
+<<<<<<< HEAD
 start a fresh event day. The same reset is available in the console under
 **Administration → Floor reset**, with the same choice of starting till; the
 Supervisor running it stays signed in so the result can be confirmed.
+=======
+start a fresh event day.
+>>>>>>> 5b8095f42f2d9189f47ba807c47ebf2a7b443522
 
 ---
 
@@ -239,10 +268,15 @@ Supervisor running it stays signed in so the result can be confirmed.
 | `POS_MIN_BET` | `1` | Smallest bet |
 | `POS_MAX_BET` | `100000` | Largest bet |
 | `POS_MAX_BETS_PER_FIGHT` | `20` | Per-terminal cap on one fight |
+<<<<<<< HEAD
 | `POS_MAX_TOP_UP` | `100000` | Largest single credit grant to a teller |
 | `POS_BIG_BET` | `10000` | Stake that flashes BIG BET on the arena board (side only, no slip details) |
 | `POS_LOW_TILL` | `1000` | Low-till warning threshold |
 | `POS_STRICT_DEVICE_BINDING` | `false` | Require the teller to sign in on their assigned, approved terminal |
+=======
+| `POS_LOW_TILL` | `1000` | Low-till warning threshold |
+| `POS_STRICT_DEVICE_BINDING` | `false` | Require an approved workstation fingerprint |
+>>>>>>> 5b8095f42f2d9189f47ba807c47ebf2a7b443522
 | `POS_SESSION_TIMEOUT` | `480` | Session lifetime in minutes |
 
 Card settings (planned fights, bet stopper, draw ratio, TV total bets, bomba,
@@ -277,7 +311,11 @@ public/css, public/js     offline UI assets (no build step)
 resources/views/          Blade screens per role, receipts, board
 database/migrations/      schema
 database/seeders/         accounts and rules only (empty floor)
+<<<<<<< HEAD
 docs/                     network, operations, security, quick reference, licensed-launch checklist
+=======
+docs/                     network, operations, security, quick reference
+>>>>>>> 5b8095f42f2d9189f47ba807c47ebf2a7b443522
 scripts/                  install, serve, HTTPS, backup, scheduled checks
 tests/Feature/            role chain, betting, draw, locks, prints, live feeds
 ```
@@ -288,7 +326,11 @@ tests/Feature/            role chain, betting, draw, locks, prints, live feeds
 
 - One server, one currency, one arena. No multi-tenant hosting.
 - Built for a trusted LAN; not hardened for direct exposure to the internet.
+<<<<<<< HEAD
 - No WebSocket push; operational screens poll for changes. On the POS, a fight opening or closing swaps the betting cards in place with a short slide (amounts already typed are kept); other changes reload the page.
+=======
+- No WebSocket push; operational screens poll and refresh themselves.
+>>>>>>> 5b8095f42f2d9189f47ba807c47ebf2a7b443522
 - No SMS/email, no PDF export (CSV and print views only).
 - Report snapshots are immutable records of their moment; live data can change
   after a snapshot is sealed.
